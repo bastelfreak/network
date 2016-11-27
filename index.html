@@ -119,9 +119,9 @@
         padding-top: 1em;
         text-align: center;
       }
-      .right-column img {
+      /*.right-column img {
         width: 100%;
-      }
+      }*/
       @page {
         size: 1024px 786px;
         margin: 0;
@@ -217,7 +217,7 @@ background-image: url(kadse1.jpg)
 
   * Amount of new servers?
 
-  * Expected amout if ingress/egress traffic?
+  * Expected amout of ingress/egress traffic?
 ]
 
 ---
@@ -247,19 +247,20 @@ background-image: url(kadse1.jpg)
 
 ---
 
-.left-column[
-## Design Solutions
-]
+class: middle, center, inverse
+## Topology
 
-.right-column[
+---
 
-* How to design network edge?
+background-image: url(internet_simple.svg)
 
-* Design the core?
+---
 
-* Design the TOR?
+background-image: url(internet_simple_complete.svg)
 
-]
+---
+
+background-image: url(internet_complete_AS.svg)
 
 ---
 
@@ -269,22 +270,73 @@ background-image: url(kadse2_cropped.jpg)
 
 .left-column[
 ## Design Solutions
+]
+
+.right-column[
+
+* How to design the network edge?
+
+* Design the core?
+
+* Design the Datacenter/TOR?
+
+  * TOR - Top of Rack switche
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+]
+
+.right-column[
+
+* Redundancy
+
+* Control over routing
+
+* More bandwidth
+
+* Reach more clients all over the world
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
 ### Topology
 ]
 
 .left-column[
- picture of normal network, real internet, two locations
+
+![Right-aligned image](basic_as.svg)
+
 ]
+
+---
+
+background-image: url(decix_router.png)
+
+---
+
+background-image: url(decix_traffic_cropped.png)
 
 ---
 
 .left-column[
 ## Design Solutions
+### Why?
+### Topology
 ### Edge
 ]
 
 .right-column[
 
+![Right-aligned image](network_edge_1.svg)
 
 ]
 
@@ -292,12 +344,84 @@ background-image: url(kadse2_cropped.jpg)
 
 .left-column[
 ## Design Solutions
+### Why?
+### Topology
+### Edge
+]
+
+.right-column[
+
+![Right-aligned image](network_edge_2.svg)
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+]
+
+.right-column[
+
+![Right-aligned image](network_edge_3.svg)
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+]
+
+.right-column[
+
+![Right-aligned image](network_edge_4.svg)
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+]
+
+.right-column[
+
+* Always use two core routers for redundancy at a POP
+
+  * POP  - Point of Presence
+
+* Always use a seperate router for transit/peering
+
+* BGP as EGP
+
+  * Border Gateway Protocol
+
+  * Exterior Gateway Protocol
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
 ### Edge
 ### Core
 ]
 
 .right-column[
 
+![Right-aligned image](network_edge_5.svg)
 
 ]
 
@@ -305,18 +429,113 @@ background-image: url(kadse2_cropped.jpg)
 
 .left-column[
 ## Design Solutions
+### Why?
+### Topology
 ### Edge
 ### Core
-### TOR
 ]
 
 .right-column[
 
+![Right-aligned image](network_edge_6.svg)
 
 ]
 
 ---
 
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+### Core
+]
+
+.right-column[
+
+![Right-aligned image](network_edge_7.svg)
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+### Core
+]
+
+.right-column[
+
+![Right-aligned image](network_edge_8.svg)
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+### Core
+]
+
+.right-column[
+
+* Most important part of the network, don't make mistakes!
+
+* Precisely monitor traffic amount + flow
+
+* build many small and redundant rings
+
+* Invest in huge capacities, upgrades are painful
+
+* Automate it
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+### Core
+### DC
+]
+
+.right-column[
+
+![Right-aligned image](DC_1.svg)
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Why?
+### Topology
+### Edge
+### Core
+### DC
+]
+
+.right-column[
+
+* Scales until the access router runs out of ports
+
+* Router ports are expensive
+
+* No redundant connection for TOR
+
+]
+
+---
 
 
 
