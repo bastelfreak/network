@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vox Pupuli - Empowering the Puppet Community</title>
+    <title>Network Design Principles - Tim Meusel </title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style type="text/css">
       @import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
@@ -155,7 +155,7 @@ class: center, middle, inverse
 
 ---
 
-# Content
+## Content
 
 * Design Goals
 
@@ -171,7 +171,7 @@ background-image: url(kadse1.jpg)
 ---
 
 .left-column[
-# Design Goals
+## Design Goals
 ]
 
 .right-column[
@@ -184,8 +184,8 @@ background-image: url(kadse1.jpg)
 ---
 
 .left-column[
-# Design Goals
-## Costs
+## Design Goals
+### Costs
 ]
 
 .right-column[
@@ -199,30 +199,123 @@ background-image: url(kadse1.jpg)
 * Cabling?
 
 ]
- ---
+
+---
 
 .left-column[
-# Design Goals
-## Costs
-## Scaling
+## Design Goals
+### Costs
+### Scaling
 ]
 
 
+.right-column[
+
+* Expected growth?
+
+  * Amount of new clients?
+
+  * Amount of new servers?
+
+  * Expected amout if ingress/egress traffic?
+]
+
+---
+
+.left-column[
+## Design Goals
+### Costs
+### Scaling
+### Redundancy
+]
+
+.right-column[
+
+* On which paths do I really need redundancy?
+
+  * Costs of redundancy vs outage?
+
+  * Don't abuse redundant rings, stay under 50% utilization!
+
+  * Logical redundancy? Physical Redundancy?
+
+* Redundancy needs more configuration than a simple link
+
+* Redundancy needs proper metrics and monitoring
+
+]
+
+---
+
+.left-column[
+## Design Solutions
+]
+
+.right-column[
+
+* How to design network edge?
+
+* Design the core?
+
+* Design the TOR?
+
+]
+
+---
+
+background-image: url(kadse2_cropped.jpg)
+
+---
+
+.left-column[
+## Design Solutions
+### Topology
+]
+
+.left-column[
+ picture of normal network, real internet, two locations
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Edge
+]
+
+.right-column[
 
 
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Edge
+### Core
+]
+
+.right-column[
 
 
+]
+
+---
+
+.left-column[
+## Design Solutions
+### Edge
+### Core
+### TOR
+]
+
+.right-column[
 
 
+]
 
-
-
-
-
-
-
-
-
+---
 
 
 
